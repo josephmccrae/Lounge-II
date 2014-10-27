@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>The Hero Channel: Secret Files</title>
+        <link rel="stylesheet" href="classified.css"  />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body>
+        <header><img src="images/thc-blue.png" /><p id="title">secret files</p></header>
+        <div class="container">
+            <div class="center">
+                <div class="control">
+                    <p id="first">Search or Select a Hero Below</p>
+                    <form class="heroSearch">
+                        <input id="typeIn" type="text" placeholder='SEARCH HERE' autofocus required>
+			        </form>
+                </div>
+                    <div class="panel">
+                        <div class="row1">
+                            <button class="heroSelect" id="Aquaman">Aquaman</button>
+
+                            <button class="heroSelect" id="Batman">Batman</button>
+
+                            <button class="heroSelect" id="Black Widow">Black Widow</button>
+
+                            <button class="heroSelect" id="Captain America">Captain America</button>
+
+                            <button class="heroSelect" id="Catwoman">Catwoman</button>
+                        </div>
+                        <div class="row2">
+                            <button class="heroSelect" id="Daredevil">Daredevil</button>
+
+                            <button class="heroSelect" id="Deadpool">Deadpool</button>
+                            
+                            <button class="heroSelect" id="The Flash">The Flash</button>
+
+                            <button class="heroSelect" id="Green Arrow">Green Arrow</button>
+
+                            <button class="heroSelect" id="Green Lantern">Green Lantern</button>
+                        </div>
+                        <div class="row3">
+                            <button class="heroSelect" id="Hawkeye">Hawkeye</button>
+                            
+                            <button class="heroSelect" id="Iron Man">Iron Man</button>
+
+                            <button class="heroSelect" id="Jean Grey">Jean Grey</button>
+
+                            <button class="heroSelect" id="Nightwing">Nightwing</button>
+
+                            <button class="heroSelect" id="Robin">Robin</button>
+                        </div>
+                        <div class="row4">
+                            <button class="heroSelect" id="Spider-Man">Spider-Man</button>
+                            
+                            <button class="heroSelect" id="Superman">Superman</button>
+
+                            <button class="heroSelect" id="Thor">Thor</button>
+
+                            <button class="heroSelect" id="Wolverine">Wolverine</button>
+
+                            <button class="heroSelect" id="Wonder Woman">Wonder Woman</button>
+                        </div>
+                    </div>
+            </div>
+                <div class="results-container">
+                    <div class="search-results"></div>
+                    <div class="results"></div>
+                </div>
+            </div>
+            <div class="hidden">
+                <dl class="hero results">
+			         <dt>Name</dt>
+				        <dd class="name"></dd>
+				    <dt>Alter Ego</dt>
+				        <dd class="real_name"></dd>
+		          </dl>
+            </div>
+    </body>
+
+</html>

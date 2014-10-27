@@ -1,0 +1,195 @@
+/* removes default margin and padding values */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: rgb(142, 0, 0);
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-color: rgb(32, 27, 101);
+    box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.25);
+    height: 100px;
+}
+
+header img {
+    float: left;
+    height: 75px;
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 70px;
+}
+
+#title {
+    color: white;
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5em;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-top: 2px;
+}
+
+/* container for selection items */
+.container {
+    display: block;
+    height: 1000px;
+    position: absolute;
+    width: 1400px;
+}
+
+/*---------------------------------------------------------------------------------
+   Center Console
+---------------------------------------------------------------------------------*/
+.center {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    width: 700px;
+}
+
+
+.hidden {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    width: 700px;
+}
+
+
+.control {
+    background-color: rgba(100, 0, 0, 0.5);
+    border: 0;
+    color: white;
+    display: block;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+#first {
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.heroSearch {
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+    width: 25%;
+}
+
+
+#typeIn {
+    height: 25px;
+    width: 100%;
+}
+
+
+button {
+    outline: none;
+}
+
+
+.panel {
+    width: 700px;
+}
+
+/*---------------------------------------------------------------------------------
+   Mood Buttons
+---------------------------------------------------------------------------------*/
+.heroSelect {
+    background-color: rgba(211, 118, 118, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1em;
+    height: 75px;
+    margin-right: -4px;
+    width: 140px;
+}
+
+
+.heroSelect:hover {
+    background-color: #ebebeb;
+    color: rgba(7, 0, 100, 0.8);
+    font-weight: 900;
+}
+
+
+.row1 {
+    margin-top: -1px;
+}
+
+
+/*---------------------------------------------------------------------------------
+   Album Stuff
+---------------------------------------------------------------------------------*/
+.album_cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 303px;
+    width: 700px;
+}
+
+.album_cover img {
+    display: inline;
+    height: 303px;
+    margin-left: 175px;
+    width:350px;
+}
+
+.synopsis {
+    display: inline;
+    float: left;
+    height: 400px;
+    width: 227px;
+}
+    
+.synopsis dt, dd {
+    margin: 25px;
+    text-align: justify;
+    width: 100%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+.viewer {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.viewer img {
+    position: absolute;
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    top: 50%;
+}
+    
+
+div .active {
+    opacity: .3;  
+}
