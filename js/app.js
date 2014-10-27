@@ -18,7 +18,9 @@ $(document).ready(function(){
         
         .done(function(result){
             console.log(characters.name);
-        };
+        });
+    };
+            
 
 
 
