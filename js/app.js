@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('.heroSelect').on('click',function(){
         getInfo();
     });
-     
 });
 
     
