@@ -10,7 +10,7 @@ $(document).ready(function(){
     var getInfo = function(){
 
         var result = $.ajax({
-            url: "http://www.comicvine.com/api/character/?api_key=145adb79c062d3d1ce533699ca10282a963deede",
+            url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede",
             dataType: "jsonp",
             type: "GET",
             });        
