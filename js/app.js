@@ -6,27 +6,18 @@ $(document).ready(function(){
 });
 
     
-    var showHero = function(characters) {
-	
-        // clone our result template code
-        var result = $('.hidden .hero').clone();
+    
 
-        // Set the question properties in result
-        var heroElem = result.find('.name');
-        heroElem.text(characters.name);
-
-        return result;
-    };
-
-
-
-    var getInfo = function(){
+    var getInfo = function(characters){
 
         var result = $.ajax({
             url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:Batman",
             dataType: "jsonp",
             type: "GET",
             })
+        
+        .done(function(result){
+            console.log(characters.name);
         };
 
 
