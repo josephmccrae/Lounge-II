@@ -26,8 +26,7 @@ $(document).ready(function(){
             url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede",
             dataType: "jsonp",
             type: "GET",
-            });
-        
+            })
         
         .done(function(result){
 		$.each(result.items, function(i, item) {
