@@ -29,9 +29,7 @@ $(document).ready(function(){
             })
         
         .done(function(result){
-		$.each(result.items, function(i, item) {
-			var final = showHero(item);
-			$('.results').append(final);
+		console.log(result);
 		});
 	   })
     };
