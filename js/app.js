@@ -27,6 +27,7 @@ $(document).ready(function(){
             })
         
         .done(function(result){
+            var hero = showHero(i);
            $('.results').append(name);
         });
     };
