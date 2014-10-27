@@ -26,7 +26,7 @@ $(document).ready(function(){
             })
         
         .done(function(result){
-           $('.results').append(answerer);
+           $('.results').append(name);
         });
     };
             
