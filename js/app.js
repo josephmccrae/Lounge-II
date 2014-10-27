@@ -27,7 +27,7 @@ $(document).ready(function(){
             dataType: "jsonp",
             type: "GET",
             })
-        });
+        };
 
 
 
