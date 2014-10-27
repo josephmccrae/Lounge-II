@@ -12,6 +12,7 @@ $(document).ready(function(){
 	
 	// set some properties related to asker
 	var hero = result.find('.name');
+    hero.text(characters.name);
         
 	return result;
 };
