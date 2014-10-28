@@ -1,40 +1,38 @@
 $(document).ready(function(){
     
     $('.heroSelect').on('click',function(){
-        getInfo(name);
+        $('.results').html('');
+        var selection = $(this).attr('id');
+        console.log(selection);
+        
+        getInfo(selection);
     });
 });
 
-    var showHero = function(characters) {
-	
-	// clone our result template code
+
+var showHero = function(characters) {
 	var result = $('.hidden .hero').clone();
-	
-	// set some properties related to asker
-	var hero = result.find('.name');
-    hero.text(characters.name);
-        
+    
+    var alias = result.find('.name');
+	alias.text(characters);
+
 	return result;
 };
-    
 
-    var getInfo = function(name){
 
-        var result = $.ajax({
-            url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:Batman",
-            dataType: "jsonp",
-            type: "GET",
-            })
+var getInfo = function(selection){
         
-        .done(function(result){
-            var hero = showHero(i);
-           $('.results').append(name);
-        });
-    };
+    var result = $.ajax({
+        url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:" + selection,
+        dataType: "jsonp",
+        type: "GET",
+    })
+    
+        var superHero = showHero();
+        $('.results').append(superHero);
+        
+        var data = { "firstName": "Joe" };
+        alert(data.firstName);
+};
             
-
-
-
-
-
 
