@@ -11,14 +11,11 @@
     </head>
     
     <body>
-        <header><img src="images/thc-blue.png" /><p id="title">secret files</p></header>
+        <header><img src="images/thc-blue.png" /><p id="title">The Hero Channel: Classified Files</p></header>
         <div class="container">
             <div class="center">
                 <div class="control">
-                    <p id="first">Search or Select a Hero Below</p>
-                    <form class="heroSearch">
-                        <input id="typeIn" type="text" placeholder='SEARCH HERE' autofocus required>
-			        </form>
+                    <p id="instruct">Search or Select a Hero Below</p>
                 </div>
                     <div class="panel">
                         <div class="row1">
@@ -68,7 +65,6 @@
                     </div>
                 </div>
                 <div class="results-container">
-                    <div class="search-results"></div>
                     <div class="results"></div>
                 </div>
             </div>
@@ -78,8 +74,12 @@
                     <dt>Name</dt>
                         <dd class="name"></dd>
                 </dl>
+                <dl class="background">
+                    <dt>Details</dt>
+                        <dd class="details"></dd>
+                </dl>
                 <div class="error">
-			        <p>Request Failed</p>
+			        <p>Something Went Wrong</p>
 		        </div>
             </div>
       

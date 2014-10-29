@@ -1,38 +1,68 @@
 $(document).ready(function(){
-    
     $('.heroSelect').on('click',function(){
+        // clear out results from previous searches
         $('.results').html('');
+        //get value of selected button
         var selection = $(this).attr('id');
         console.log(selection);
-        
         getInfo(selection);
     });
 });
 
 
+
 var showHero = function(characters) {
 	var result = $('.hidden .hero').clone();
     
-    var alias = result.find('.name');
-	alias.text(characters);
+    var hero = result.find('.name');
+	hero.text(characters.name);
 
+    var info = result.find('.details');
+	info.text(characters.deck);
+    
 	return result;
 };
 
 
+
+var showSearchResults = function(query, resultNum) {
+	var results = resultNum + ' results for <strong>' + query;
+	return results;
+};
+
+
+var showError = function(error){
+	var errorElem = $('.hidden .error').clone();
+	var errorText = '<p>' + error + '</p>';
+	errorElem.append(errorText);
+};
+
+
 var getInfo = function(selection){
-        
+    
+    
+	var request = {field_list: 'deck'};
+    
     var result = $.ajax({
         url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:" + selection,
+        data: request,
         dataType: "jsonp",
         type: "GET",
-    })
-    
-        var superHero = showHero();
-        $('.results').append(superHero);
+    }) 
+    .done(function(result){
+        var searchResults = showSearchResults(result.items.length);
         
-        var data = { "firstName": "Joe" };
-        alert(data.firstName);
-};
-            
-
+		$.each(result.items, function(i, item) {
+			var superHero = showHero(item);
+            $('.results').append(superHero);
+        });
+        
+        var data = { "heroName": selection };
+        alert(data.selection);  
+    }) 
+    
+    .fail(function(jqXHR, error, errorThrown){
+		var errorElem = showError(error);
+		$('.results-container').append(errorElem);
+	});
+}
