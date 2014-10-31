@@ -3,7 +3,7 @@ $(document).ready(function(){
         // clear out results from previous searches
         $('.results').html('');
         //get value of selected button
-        var selection = $(this).attr('id');
+        var selection = $(this).attr('value');
         console.log(selection);
         getInfo(selection);
     });
@@ -40,11 +40,10 @@ var showError = function(error){
 
 var getInfo = function(selection){
     
-    
-	var request = {field_list: 'deck'};
+    var request = {field_list: 'name,image,deck,real_name,aliases'};
     
     var result = $.ajax({
-        url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:" + selection,
+        url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:" + selection + "&limit=1&format=json",
         data: request,
         dataType: "jsonp",
         type: "GET",
