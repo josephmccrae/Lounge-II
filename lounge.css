@@ -6,26 +6,27 @@
 
 
 body {
-    background-color: rgb(142, 0, 0);
+    background-color: #fff;
     height: 100%;
     width: 100%;
 }
 
 header {
-    background-color: rgba(100, 0, 0, 0.5);
+    background-color: rgb(137, 137, 137);
     box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.25);
     height: 35px;
-    width: 1400px;
+    width: 100%;
 }
 
 
 #title {
-    color: white;
+    color: #fff;
     float: left;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1.5em;
+    font-family: 'Arizonia', sans-serif;
+    font-size: 2em;
     padding-left: 15px;
     padding-top: 2px;
+    text-shadow: 2px 2px 7px #000;
 }
 
 /* container for selection items */
@@ -33,7 +34,7 @@ header {
     display: block;
     height: 1000px;
     position: absolute;
-    width: 1400px;
+    width: 1200px;
 }
 
 /*---------------------------------------------------------------------------------
@@ -41,55 +42,72 @@ header {
 ---------------------------------------------------------------------------------*/
 .center {
     border: 1px solid rgba(0, 0, 0, 0.25);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-    width: 700px;
+    margin-left: 300px;
+    margin-top: 100px;
+    width: 600px;
 }
 
 
 .control {
-    background-color: rgba(100, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0);
     border: 0;
     color: white;
     display: block;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
+    width: 600px;
 }
 
 
 #instruct {
     float: left;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 2em;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    margin-left: 10px;
+    margin-top: 16px;
 }
 
-.search {
-    float: right;
-    margin-right: 25px;
-    margin-top: 18px;
+
+  
+input[name='lyric'] {
+    background-color: gold;
+    display: block;
+    float: left;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 12px;
+    width: 330px;
 }
+
+
+.getLyrics {
+    background-color: #a70000;
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    display: block;
+    float: left;
+    font-weight: 800;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 5px;
+    width: 40px;
     
+}
+
+
 /*---------------------------------------------------------------------------------
-   Results
+   Results Template
 ---------------------------------------------------------------------------------*/
 .results-container {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
-    height: 200px;
+    background-color: rgba(0, 0, 0, 0.25);
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
+    margin-left: 300px;
+    width: 600px;
 }
 
 .results {
-    height: 200px;
-    width: 700px;
+    width: 600px;
 }
 
 
@@ -99,4 +117,48 @@ header {
 
 dt {
     display: none;
+}
+
+.song {
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+/*---------------------------------------------------------------------------------
+   Results
+---------------------------------------------------------------------------------*/
+dd {
+    color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.title {
+    color: black;
+    display: block;
+    float: left;
+}
+
+
+.title a {
+    color: yellow;
+}
+
+
+.name {
+    color: black;
+    display: inline block;
+    float: left;
+    margin-left: -20px;
+}
+
+
+.clip {
+    clear: left;
+}
+
+
+em {
+     background-color: orange;
 }

@@ -22,7 +22,7 @@ var showLyric = function(songs) {
 	titleElem.text(songs.title);
     
     var clip = result.find('.clip');
-	clip.text(songs.context);
+	clip.html(songs.context);
     
 	return result;
 };
@@ -34,9 +34,9 @@ var getInfo = function(lyric){
     var title;
     
     var result = $.ajax({
-        url: "http://api.lyricsnmusic.com/songs?api_key=69ffd627428af8183c89c2b222edc7",
+        url: 'http://api.lyricsnmusic.com/songs?api_key=69ffd627428af8183c89c2b222edc7',
         data: {artist: name, track:title, lyrics: lyric },
-        dataType: "jsonp",
+        dataType: 'jsonp',
         type: "GET",
     }) 
     .done(function(result){
@@ -44,7 +44,7 @@ var getInfo = function(lyric){
         $.each(result.data, function(i, item) {
 			var tune = showLyric(item);
 			$('.results').append(tune);
-            console.log(tune);
+            console.log(result);
 		});
     })
 }
