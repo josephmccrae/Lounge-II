@@ -1,67 +1,50 @@
 $(document).ready(function(){
-    $('.heroSelect').on('click',function(){
+    $('.search').submit(function(event){
         // clear out results from previous searches
         $('.results').html('');
         //get value of selected button
-        var selection = $(this).attr('value');
-        console.log(selection);
-        getInfo(selection);
+        var lyric = $(this).find("input[name='lyric']").val();
+        console.log(lyric);
+        getInfo(lyric);
     });
 });
 
 
 
-var showHero = function(characters) {
-	var result = $('.hidden .hero').clone();
+var showLyric = function(songs) {
+	var result = $('.hidden .verse').clone();
     
-    var hero = result.find('.name');
-	hero.text(characters.name);
+    var artist = result.find('.name');
+	artist.text(songs.artist.name);
 
-    var info = result.find('.details');
-	info.text(characters.deck);
+    var titleElem = result.find('.title a');
+	titleElem.attr('href', songs.url);
+	titleElem.text(songs.title);
+    
+    var clip = result.find('.clip');
+	clip.text(songs.context);
     
 	return result;
 };
 
 
-
-var showSearchResults = function(query, resultNum) {
-	var results = resultNum + ' results for <strong>' + query;
-	return results;
-};
-
-
-var showError = function(error){
-	var errorElem = $('.hidden .error').clone();
-	var errorText = '<p>' + error + '</p>';
-	errorElem.append(errorText);
-};
-
-
-var getInfo = function(selection){
+var getInfo = function(lyric){
     
-    var request = {field_list: 'name,image,deck,real_name,aliases'};
+    var name;
+    var title;
     
     var result = $.ajax({
-        url: "http://www.comicvine.com/api/characters/?api_key=145adb79c062d3d1ce533699ca10282a963deede&filter=name:" + selection + "&limit=1&format=json",
-        data: request,
+        url: "http://api.lyricsnmusic.com/songs?api_key=69ffd627428af8183c89c2b222edc7",
+        data: {artist: name, track:title, lyrics: lyric },
         dataType: "jsonp",
         type: "GET",
     }) 
     .done(function(result){
-        var searchResults = showSearchResults(result.items.length);
-        
-		$.each(result.items, function(i, item) {
-			var superHero = showHero(item);
-            $('.results').append(superHero);
-        });
-        
-        var data = { "heroName": selection };
-        alert(data.selection);  
-    }) 
-    
-    .fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.results-container').append(errorElem);
-	});
+                
+        $.each(result.data, function(i, item) {
+			var tune = showLyric(item);
+			$('.results').append(tune);
+            console.log(tune);
+		});
+    })
 }

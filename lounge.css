@@ -12,27 +12,19 @@ body {
 }
 
 header {
-    background-color: rgb(32, 27, 101);
+    background-color: rgba(100, 0, 0, 0.5);
     box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.25);
-    height: 100px;
+    height: 35px;
+    width: 1400px;
 }
 
-header img {
-    float: left;
-    height: 75px;
-    margin-left: 15px;
-    margin-top: 10px;
-    width: 70px;
-}
 
 #title {
     color: white;
     float: left;
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.5em;
-    margin-left: 15px;
-    margin-top: 30px;
-    padding-left: 25px;
+    padding-left: 15px;
     padding-top: 2px;
 }
 
@@ -53,7 +45,7 @@ header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 300px;
+    margin-top: 200px;
     width: 700px;
 }
 
@@ -71,48 +63,17 @@ header img {
 
 
 #instruct {
+    float: left;
     font-family: 'Titillium Web', sans-serif;
     font-size: 2em;
-    text-align: center;
 }
 
-
-.panel {
-    width: 700px;
+.search {
+    float: right;
+    margin-right: 25px;
+    margin-top: 18px;
 }
-
-/*---------------------------------------------------------------------------------
-   Button Styles
----------------------------------------------------------------------------------*/
-button {
-    outline: none;
-}
-
-
-.heroSelect {
-    background-color: rgba(211, 118, 118, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    color: white;
-    font-family: 'Oxygen', sans-serif;
-    font-size: 1em;
-    height: 75px;
-    margin-right: -4px;
-    width: 140px;
-}
-
-
-.heroSelect:hover {
-    background-color: #ebebeb;
-    color: rgba(7, 0, 100, 0.8);
-    font-weight: 900;
-}
-
-
-.row1 {
-    margin-top: -1px;
-}
-
-
+    
 /*---------------------------------------------------------------------------------
    Results
 ---------------------------------------------------------------------------------*/
@@ -127,12 +88,15 @@ button {
 }
 
 .results {
-    border: 1px solid black;
     height: 200px;
     width: 700px;
 }
 
 
 .hidden {
+    display: none;
+}
+
+dt {
     display: none;
 }

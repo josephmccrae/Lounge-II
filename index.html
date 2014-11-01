@@ -3,80 +3,41 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>The Hero Channel: Secret Files</title>
-        <link rel="stylesheet" href="classified.css"  />
+        <title>Lyricist Lounge</title>
+        <link rel="stylesheet" href="lounge.css"  />
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300' rel='stylesheet' type='text/css'>
         <script src="js/jquery-2.1.1.min.js"></script>
         <script src="js/app.js"></script>
     </head>
     
     <body>
-        <header><img src="images/thc-blue.png" /><p id="title">The Hero Channel: Classified Files</p></header>
+        <header><p id="title">Lyricist Lounge</p></header>
         <div class="container">
             <div class="center">
                 <div class="control">
-                    <p id="instruct">Search or Select a Hero Below</p>
+                    <p id="instruct">Find your lyrics</p>
+                    <form class="search" onsubmit="return false;">
+				<input type="text" placeholder='Enter Lyrics...' name="lyric" size="30" autofocus required results=5>
+                <input type="submit" value="Submit">
+			</form>
                 </div>
                     <div class="panel">
-                        <div class="row1">
-                            <button class="heroSelect" value="Aquaman">Aquaman</button>
-
-                            <button class="heroSelect" value="Barbara Gordon">Batgirl</button>
-
-                            <button class="heroSelect" value="Batman">Batman</button>
-
-                            <button class="heroSelect" value="Blue Beetle">Blue Beetle</button>
-
-                            <button class="heroSelect" value="Booster Gold">Booster Gold</button>
-                        </div>
-                        <div class="row2">
-                            <button class="heroSelect" value="Catwoman">Catwoman</button>
-                            
-                            <button class="heroSelect" value="John Constantine">Constantine</button>
-
-                            <button class="heroSelect" value="Cyborg">Cyborg</button>
-                            
-                            <button class="heroSelect" value="Barry Allen">The Flash</button>
-
-                            <button class="heroSelect" value="Green Arrow">Green Arrow</button>
-                        </div>
-                        <div class="row3">
-                            <button class="heroSelect" value="Hal Jordan">Green Lantern</button>
-                            
-                            <button class="heroSelect" value="Hawkgirl">Hawkgirl</button>
-                            
-                            <button class="heroSelect" value="Hawkman">Hawkman</button>
-
-                            <button class="heroSelect" value="Dick Grayson">Nightwing</button>
-                            
-                            <button class="heroSelect" value="Robin">Robin</button>
-                        </div>
-                        <div class="row4">
-                            <button class="heroSelect" value="Billy Batson">Shazam</button>
-                            
-                            <button class="heroSelect" value="Supergirl">Supergirl</button>
-
-                            <button class="heroSelect" value="Superman">Superman</button>
-
-                            <button class="heroSelect" value="Wonder Woman">Wonder Woman</button>
-
-                            <button class="heroSelect" value="Zatanna">Zatanna</button>
-                        </div>
                     </div>
                 </div>
                 <div class="results-container">
+                    <div class="search-results"></div>
                     <div class="results"></div>
                 </div>
             </div>
             
             <div class="hidden">
-                <dl class="hero">
-                    <dt>Name</dt>
+                <dl class="song verse">
+                    <dt>Artist</dt>
                         <dd class="name"></dd>
-                </dl>
-                <dl class="background">
-                    <dt>Details</dt>
-                        <dd class="details"></dd>
+                    <dt>Track</dt>
+                        <dd class="title"><a href="" target="_blank"></a></dd>
+                    <dt>Lyric</dt>
+                        <dd class="clip"></dd>
                 </dl>
                 <div class="error">
 			        <p>Something Went Wrong</p>
