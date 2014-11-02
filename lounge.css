@@ -4,21 +4,20 @@
     padding: 0;
 }
 
-
 body {
-    background-color: rgb(137, 137, 137);
+    background-image: url(images/lyric_collage.png);
+    background-repeat: no-repeat;
+    background-color: #ccb2b2;
     height: 100%;
     width: 100%;
 }
 
-
 header {
-    background-color: #000;
+    background-color: #650000;
     box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.25);
     height: 35px;
     width: 100%;
 }
-
 
 #title {
     color: #fff;
@@ -29,15 +28,13 @@ header {
     padding-top: 2px;
 }
 
-
-
 .container {
+    
     display: block;
     height: 100%;
     position: absolute;
     width: 1200px;
 }
-
 
 /*---------------------------------------------------------------------------------
    Center Console
@@ -50,8 +47,7 @@ header {
     display: block;
     display: block;
     height: 50px;
-    margin-left: 300px;
-    margin-top: 100px;
+    margin-left: 298px;
     width: 800px;
 }
 
@@ -64,7 +60,6 @@ header {
     margin-top: 16px;
 }
 
-
  /* search input */ 
 input[name='lyric'] {
     background-color: #e3e3e3;
@@ -75,7 +70,6 @@ input[name='lyric'] {
     margin-top: 12px;
     width: 475px;
 }
-
 
 /* search button */
 .getLyrics {
@@ -89,18 +83,18 @@ input[name='lyric'] {
     height: 40px;
     margin-left: 45px;
     margin-top: 5px;
+    outline: none;
     width: 40px;
     
 }
 
-
 /*---------------------------------------------------------------------------------
-   Results Template
+   Results Container
 ---------------------------------------------------------------------------------*/
 .results-container {
     background-color: rgba(0, 0, 0, 0.25);
     display: block;
-    margin-left: 300px;
+    margin-left: 298px;
     width: 800px;
 }
 
@@ -108,12 +102,7 @@ input[name='lyric'] {
     width: 800px;
 }
 
-
 .hidden {
-    display: none;
-}
-
-dt {
     display: none;
 }
 
@@ -123,21 +112,25 @@ dt {
 }
 
 /*---------------------------------------------------------------------------------
-   Results
+   Results Details
 ---------------------------------------------------------------------------------*/
+dt {
+    display: none;
+}
+
 dd {
     color: white;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-
+/* song title */
 .title {
     display: block;
     float: left;
 }
 
-
+/* song title link */
 .title a {
     color: #ffd800;
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -145,9 +138,9 @@ dd {
     text-shadow: 2px 2px 7px #000;
 }
 
-
+/* artist name */
 .name {
-    color: #9b0000;
+    color: #d4bc96;
     display: inline block;
     float: left;
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -158,13 +151,15 @@ dd {
     text-shadow: 1px 1px 2px #000;
 }
 
-
+/* lyric clip containing search criteria */
 .clip {
     clear: left;
+    color: #fff;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
 }
 
-
+/* highlighted search criteria */
 em {
-     background-color: #9a5959;
+     background-color: #c78f00;
 }

@@ -28,10 +28,19 @@ var showLyric = function(songs) {
 };
 
 
+// takes error string and turns it into displayable DOM element
+var showError = function(error){
+	var errorElem = $('.hidden .error').clone();
+	var errorText = '<p>' + error + '</p>';
+	errorElem.append(errorText);
+};
+
+
 var getInfo = function(lyric){
     
     var name;
     var title;
+    var count = 0;
     
     var result = $.ajax({
         url: 'http://api.lyricsnmusic.com/songs?api_key=69ffd627428af8183c89c2b222edc7',
@@ -45,6 +54,12 @@ var getInfo = function(lyric){
 			var tune = showLyric(item);
 			$('.results').append(tune);
             console.log(result);
+            count++;
+            console.log(count);
 		});
     })
+    .fail(function(jqXHR, error, errorThrown){
+		var errorElem = showError(error);
+		$('.search-results').append(errorElem);
+	});
 }
